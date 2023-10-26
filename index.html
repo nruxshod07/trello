@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/public/trello.png" type="image/x-icon" />
   <link rel="stylesheet" href="style.scss">
-  <title>Document</title>
+  <title>Trello</title>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
               Шаблоны
               <img src="public/show.svg" alt="">
             </a>
-            <button class="create_task">Создать</button>
+            <button class="create_task" data-modal>Создать</button>
           </nav>
         </div>
 
@@ -130,12 +131,40 @@
             <div class="desk"></div>
             <h2>Desk Name</h2>
           </div>
-        </div>
+        </div> 
       </div>
     </aside>
   </div>
-
-  <script src="main.js"></script>
+  <div class="modal">
+    <div class="modal__dialog">
+        <div class="modal__content">
+            <form action="#" name="form">
+                <div data-close class="modal__close">&times;</div>
+                <div>
+                  <div class="modal__title">Напишите задачу</div>
+                  <input required placeholder="Title" name="titel" type="text" class="modal__input">
+                </div>
+                <div>
+                  <div class="modal__title">Описание этой задачи</div>
+                  <input required placeholder="Description" name="description" type="text" class="modal__input modal__des">
+                </div>
+                <div>
+                  <div class="modal__title">Выберите участников команды</div>
+                  <select name="members" class="modal__input"></select>
+                </div>
+                <div>
+                  <div class="modal__title">Выберите статус</div>
+                  <select name="status" class="modal__input"></select>
+                </div>
+                <div>
+                  <div class="modal__title">Выберите дедлайн</div>
+                  <input required placeholder="" name="description" type="text" class="modal__input">
+                </div>
+                <button class="create_btn">Создать задачу</button>
+            </form>
+        </div>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
 </body>
-
 </html>
