@@ -13,15 +13,13 @@ export const getData = async (url) => {
 }
 
 export const postData = async (url, body) => {
-    const res = await fetch(BASE_URL + url, {
-        method: 'post',
-        body: JSON.stringify(body),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-
-    return res
+    try {
+        const res = await axios.post(BASE_URL + url,  body)
+    
+        return res
+    } catch(e) {
+        console.log(e);
+    }
 }
 
 export const removeData = async (url, id) => {
@@ -40,17 +38,4 @@ export const patchData = async (url, body) => {
     })
 
     return res
-}
-
-
-export const getSymbols = async () => {
-    const res = await fetch(import.meta.env.VITE_FIXER_IO, {
-        headers: {
-            apikey: import.meta.env.VITE_FIXER_API_KEY
-        }
-    })
-
-    const data = await res.json()
-    
-    return data
 }

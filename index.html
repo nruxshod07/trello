@@ -2,253 +2,274 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/public/trello.png" type="image/x-icon" />
-  <link rel="stylesheet" href="style.scss">
-  <title>Trello</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/public/trello.png" type="image/x-icon" />
+	<link rel="stylesheet" href="style.scss">
+	<title>Trello</title>
 </head>
 
 <body>
-  <header>
-    <div class="head_big_box">
-      <div class="header_box">
-        <button class="home_page_modal">
-          <img src="public/home_page.svg" alt="">
-        </button>
-        <a href="#" class="logo">
-          <img src="public/trello_logo.png" alt="">
-        </a>
-        <nav>
-          <a href="#">
-            Рабочие пространства
-            <img src="public/show.svg" alt="">
-          </a>
-          <a href="#">
-            Недавние
-            <img src="public/show.svg" alt="">
-          </a>
-          <a href="#">
-            В избранном
-            <img src="public/show.svg" alt="">
-          </a>
-          <a href="#">
-            Шаблоны
-            <img src="public/show.svg" alt="">
-          </a>
-          <button class="create_task" data-modal>Создать</button>
-        </nav>
-      </div>
+	<header>
+		<div class="head_big_box">
+			<div class="header_box">
+				<button class="home_page_modal">
+					<img src="public/home_page.svg" alt="">
+				</button>
+				<a href="#" class="logo">
+					<img src="public/trello_logo.png" alt="">
+				</a>
+				<nav>
+					<a href="#">
+						Рабочие пространства
+						<img src="public/show.svg" alt="">
+					</a>
+					<a href="#">
+						Недавние
+						<img src="public/show.svg" alt="">
+					</a>
+					<a href="#">
+						В избранном
+						<img src="public/show.svg" alt="">
+					</a>
+					<a href="#">
+						Шаблоны
+						<img src="public/show.svg" alt="">
+					</a>
+					<button class="create_task" data-modal>Создать</button>
+				</nav>
+			</div>
 
-      <div class="header_box">
-        <div class="search">
-          <img src="public/search.svg" alt="search">
-          <input type="text" name="search" id="search" placeholder="Поиск">
-        </div>
-        <div class="help_box">
-          <button class="message">
-            <img src="public/message.svg" alt="sms">
-          </button>
-          <button class="help">
-            <img src="public/help.svg" alt="help">
-          </button>
-          <a class="profile" href="#">
-            <button>P</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="lower_header">
-    <div class="lower_header_l">
-      <a id="dot_logo" href="#">DOT DEVS</a>
-      <a class="invert" href=""><img width="20px" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/star-256.png" alt=""></a>
-      <a class="invert" href="#"><img width="20px" src="https://cdn2.iconfinder.com/data/icons/lightly-icons/30/group-480.png" alt=""></a>
-      <a href="" class="byDesk">
-        <img width="20px" src="https://cdn4.iconfinder.com/data/icons/web-and-mobile-ui/24/UI-20-256.png" alt="">
-        <p>По доске </p>
-      </a>
-      <a href=""><img class="invert" width="20px" src="https://cdn1.iconfinder.com/data/icons/arrows-vol-1-5/24/dropdown_arrow2-256.png" alt=""></a>
-    </div>
-    <div class="lower_header_r">
-      <a href="#"><img class="invert" width="20px" src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-4/256/rocket-launch-512.png" alt=""></a>
-      <a href="#"><img class="invert" width="20px" src="https://cdn4.iconfinder.com/data/icons/essentials-set-3/100/Electricity-256.png" alt=""></a>
-      <a class="flex" href="#"><img class="invert" width="20px" src="https://cdn1.iconfinder.com/data/icons/material-core/18/filter-256.png" alt=""><p>Фильтры</p></a>
-      <a class="PFPs" href="#">
-        <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg" alt="" class="pfp">
-        <img src="https://media.istockphoto.com/id/1410538853/photo/young-man-in-the-public-park.webp?b=1&s=170667a&w=0&k=20&c=pGdjFVdK-_BhTa6PMy5VNcXdbxVNngzg-OPzMfJKrG8=" alt="" class="pfp">
-        <img src="https://images.generated.photos/VKm_RrXhmrpLNgZ4U3UgO0vMiLzikgR6aPW5Gr_hCzg/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MzI4NTQ5LmpwZw.jpg" alt="" class="pfp">
-        <img src="https://cdn.pixabay.com/photo/2018/10/29/21/46/human-3782189_640.jpg" alt="" class="pfp">
-        <img src="https://play-lh.googleusercontent.com/ivAXDbkway-Tfh_aiaivOkrb0ok52is0EpW6WuEUMx4fXZPg1AIrjUEIN3pYjoHE9Os=s256-rw" alt="" class="pfp">
-        <span>+1</span>
-      </a>
-      <div class="share">
-        <img width="20px" src="https://cdn4.iconfinder.com/data/icons/social-productivity-line-art-4/128/add-user-256.png" alt="">
-        <p class="white">Поделится</p>
-      </div>
-      <a href=""><img width="30px" class="invert" src="https://cdn4.iconfinder.com/data/icons/mauscons/89/ic-misc-256.png" alt=""> </a>
-    </div>
-  </div>
-  <div class="dark">
-    
-
-    <aside>
-      <div class="header">
-        <div class="aside_head_profile">
-          <button>P</button>
-        </div>
-        <div class="status">
-          <h1 class="user_name">PRODIGY: рабочее
-            пространство</h1>
-          <p class="price">Бесплатно</p>
-        </div>
-        <div class="hide_aside">
-          <button>
-            <img src="public/hide_aside.svg" alt="">
-          </button>
-        </div>
-        <div class="show_aside hide">
-          <img src="public/hide_aside.svg" alt="">
-        </div>
-      </div>
-
-      <div class="body">
-        <div class="first_part">
-          <div class="desks hovered">
-            <img src="public/desks.svg" alt="">
-            <p class="desk">Доски</p>
-          </div>
-          <div class="members hovered">
-            <span>
-              <img src="public/member.svg" alt="">
-              <p class="desk">Участники</p>
-            </span>
-            <span>
-              <img src="public/add.svg" alt="">
-            </span>
-          </div>
-          <div class="setings hovered">
-            <span>
-              <img src="public/settings.svg" alt="">
-              <p class="desk">Настройки рабочего
-                пространства</p>
-            </span>
-            <span>
-              <img src="public/show.svg" alt="">
-            </span>
-          </div>
-        </div>
-
-        <div class="second_part">
-          <h2 class="modes">Режимы просмотра рабочего прос…</h2>
-
-          <div class="table hovered">
-            <img src="public/table.svg" alt="table">
-            <p class="table">Таблица</p>
-          </div>
-          <div class="calendar hovered">
-            <img src="public/calendar.svg" alt="calendar">
-            <p class="calendar">Таблица</p>
-          </div>
-        </div>
-
-        <div class="third_part">
-          <div class="my_desks">
-            <h2>Мои доски</h2>
-            <img src="public/add.svg" alt="">
-          </div>
-
-          <div class="my_desk">
-            <div class="desk"></div>
-            <h2>Desk Name</h2>
-          </div>
-        </div> 
-      </div>
-    </aside>
-    <div class="container">
-      <div class="div_emp">
-          <span class="title-span">Cделать</span>
-          <div class="empty">
-
-          </div>
-          <form name="add_task1" class="add_div add_div1 hide">
-            <textarea name="" id="" cols="30" rows="10" class="txt txt1" placeholder="Введите загаловок этой карточки"></textarea>
-            <div class="add_cl">
-              <button class="add_1 add_card">Добавить карточку</button>
-              <span class="close1 close"><svg width="24" height="24" class="clos3 clos"     role="presentation" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C11.4477 3 11 3.44772 11 4V11L4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11L13 11V4C13 3.44772 12.5523 3 12 3Z" fill="currentColor"></path></svg></span>
-            </div>
-          </form>
-          <button class="add add1">
-              <span class="plus"><svg width="24" height="24"      role="presentation" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C11.4477 3 11 3.44772 11 4V11L4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11L13 11V4C13 3.44772 12.5523 3 12 3Z" fill="currentColor"></path></svg></span>
-            <h1 class="add_h1">Добавить карточку</h1>
-          </button>
-      </div>
-      <div class="div_emp">
-          <span class="title-span">В ходе выполнения</span>
-          <div class="empty">
-
-          </div>
-          <form name="add_task2" class="add_div hide add_div2">
-            <textarea name="" id="" cols="30" rows="10" class="txt txt2" placeholder="Введите загаловок этой карточки"></textarea>
-            <div class="add_cl">
-              <button class="add_2 add_card">Добавить карточку</button>
-              <span class="close2 close"><svg width="24" height="24" class="clos3 clos"     role="presentation" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C11.4477 3 11 3.44772 11 4V11L4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11L13 11V4C13 3.44772 12.5523 3 12 3Z" fill="currentColor"></path></svg></span>
-            </div>
-          </form>
-          <button class="add add2">
-            <span class="plus"><svg width="24" height="24"      role="presentation" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C11.4477 3 11 3.44772 11 4V11L4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11L13 11V4C13 3.44772 12.5523 3 12 3Z" fill="currentColor"></path></svg></span>
-            <h1 class="add_h1">Добавить карточку</h1>
-          </button>
-      </div>
-      <div class="div_emp">
-          <span class="title-span">Сделано</span>
-          <div class="empty">
-
-          </div>
-          <form name="add_task3" class="add_div add_div3 hide">
-            <textarea name="" id="" cols="30" rows="10" class="txt txt3" placeholder="Введите загаловок этой карточки"></textarea>
-            <div class="add_cl">
-              <button class="add_3 add_card">Добавить карточку</button>
-              <span class="close3 close"><svg width="24" height="24" class="clos3 clos"     role="presentation" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C11.4477 3 11 3.44772 11 4V11L4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11L13 11V4C13 3.44772 12.5523 3 12 3Z" fill="currentColor"></path></svg></span>
-            </div>
-          </form>
-          <button class="add add3">
-            <span class="plus"><svg width="24" height="24"      role="presentation" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C11.4477 3 11 3.44772 11 4V11L4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11L13 11V4C13 3.44772 12.5523 3 12 3Z" fill="currentColor"></path></svg></span>
-            <h1 class="add_h1">Добавить карточку</h1>
-          </button>
-      </div>
-  </div>
-  </div>
-  <div class="modal">
-    <div class="modal__dialog">
-        <div class="modal__content">
-            <form action="#" name="form">
-                <div data-close class="modal__close">&times;</div>
-                <div>
-                  <div class="modal__title">Напишите задачу</div>
-                  <input required placeholder="Title" name="titel" type="text" class="modal__input">
-                </div>
-                <div>
-                  <div class="modal__title">Описание этой задачи</div>
-                  <input required placeholder="Description" name="description" type="text" class="modal__input modal__des">
-                </div>
-                <div>
-                  <div class="modal__title">Выберите участников команды</div>
-                  <select name="members" class="modal__input"></select>
-                </div>
-                <div>
-                  <div class="modal__title">Выберите статус</div>
-                  <select name="status" class="modal__input"></select>
-                </div>
-                <div>
-                  <div class="modal__title">Выберите дедлайн</div>
-                  <input required placeholder="" name="description" type="text" class="modal__input">
-                </div>
-                <button class="create_btn">Создать задачу</button>
-            </form>
-        </div>
-    </div>
-  </div>
-  <script type="module" src="main.js"></script>
+			<div class="header_box">
+				<div class="search">
+					<img src="public/search.svg" alt="search">
+					<input type="text" name="search" id="search" placeholder="Поиск">
+				</div>
+				<div class="help_box">
+					<button class="message">
+						<img src="public/message.svg" alt="sms">
+					</button>
+					<button class="help">
+						<img src="public/help.svg" alt="help">
+					</button>
+					<a class="profile" href="#">
+						<button>P</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="lower_header">
+		<div class="lower_header_l">
+			<a id="dot_logo" href="#">DOT DEVS</a>
+			<a class="invert" href=""><img width="20px"
+					src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/star-256.png"
+					alt=""></a>
+			<a class="invert" href="#"><img width="20px"
+					src="https://cdn2.iconfinder.com/data/icons/lightly-icons/30/group-480.png" alt=""></a>
+			<a href="" class="byDesk">
+				<img width="20px" src="https://cdn4.iconfinder.com/data/icons/web-and-mobile-ui/24/UI-20-256.png"
+					alt="">
+				<p>По доске </p>
+			</a>
+			<a href=""><img class="invert" width="20px"
+					src="https://cdn1.iconfinder.com/data/icons/arrows-vol-1-5/24/dropdown_arrow2-256.png" alt=""></a>
+		</div>
+		<div class="lower_header_r">
+			<a href="#"><img class="invert" width="20px"
+					src="https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-4/256/rocket-launch-512.png"
+					alt=""></a>
+			<a href="#"><img class="invert" width="20px"
+					src="https://cdn4.iconfinder.com/data/icons/essentials-set-3/100/Electricity-256.png" alt=""></a>
+			<a class="flex" href="#"><img class="invert" width="20px"
+					src="https://cdn1.iconfinder.com/data/icons/material-core/18/filter-256.png" alt="">
+				<p>Фильтры</p>
+			</a>
+			<a class="PFPs" href="#">
+				<img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg"
+					alt="" class="pfp">
+				<img src="https://media.istockphoto.com/id/1410538853/photo/young-man-in-the-public-park.webp?b=1&s=170667a&w=0&k=20&c=pGdjFVdK-_BhTa6PMy5VNcXdbxVNngzg-OPzMfJKrG8="
+					alt="" class="pfp">
+				<img src="https://images.generated.photos/VKm_RrXhmrpLNgZ4U3UgO0vMiLzikgR6aPW5Gr_hCzg/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MzI4NTQ5LmpwZw.jpg"
+					alt="" class="pfp">
+				<img src="https://cdn.pixabay.com/photo/2018/10/29/21/46/human-3782189_640.jpg" alt="" class="pfp">
+				<img src="https://play-lh.googleusercontent.com/ivAXDbkway-Tfh_aiaivOkrb0ok52is0EpW6WuEUMx4fXZPg1AIrjUEIN3pYjoHE9Os=s256-rw"
+					alt="" class="pfp">
+				<span>+1</span>
+			</a>
+			<div class="share">
+				<img width="20px"
+					src="https://cdn4.iconfinder.com/data/icons/social-productivity-line-art-4/128/add-user-256.png"
+					alt="">
+				<p class="white">Поделится</p>
+			</div>
+			<a href=""><img width="30px" class="invert"
+					src="https://cdn4.iconfinder.com/data/icons/mauscons/89/ic-misc-256.png" alt=""> </a>
+		</div>
+	</div>
+	<main>
+		<aside>
+			<div class="header">
+				<div class="aside_head_profile">
+					<button>P</button>
+				</div>
+				<div class="status">
+					<h1 class="user_name">PRODIGY: рабочее
+						пространство</h1>
+					<p class="price">Бесплатно</p>
+				</div>
+				<div class="hide_aside">
+					<button>
+						<img src="public/hide_aside.svg" alt="">
+					</button>
+				</div>
+				<div class="show_aside hide">
+					<img src="public/hide_aside.svg" alt="">
+				</div>
+			</div>
+	
+			<div class="body">
+				<div class="first_part">
+					<div class="desks hovered">
+						<img src="public/desks.svg" alt="">
+						<p class="desk">Доски</p>
+					</div>
+					<div class="members hovered">
+						<span>
+							<img src="public/member.svg" alt="">
+							<p class="desk">Участники</p>
+						</span>
+						<span>
+							<img src="public/add.svg" alt="">
+						</span>
+					</div>
+					<div class="setings hovered">
+						<span>
+							<img src="public/settings.svg" alt="">
+							<p class="desk">Настройки рабочего
+								пространства</p>
+						</span>
+						<span>
+							<img src="public/show.svg" alt="">
+						</span>
+					</div>
+				</div>
+	
+				<div class="second_part">
+					<h2 class="modes">Режимы просмотра рабочего прос…</h2>
+	
+					<div class="table hovered">
+						<img src="public/table.svg" alt="table">
+						<p class="table">Таблица</p>
+					</div>
+					<div class="calendar hovered">
+						<img src="public/calendar.svg" alt="calendar">
+						<p class="calendar">Таблица</p>
+					</div>
+				</div>
+	
+				<div class="third_part">
+					<div class="my_desks">
+						<h2>Мои доски</h2>
+						<img src="public/add.svg" alt="">
+					</div>
+	
+					<div class="my_desk">
+						<div class="desk"></div>
+						<h2>Desk Name</h2>
+					</div>
+				</div>
+			</div>
+		</aside>
+		<div class="container">
+			<div class="div_emp">
+				<span class="title-span">Cделать</span>
+				<div class="empty">
+	
+				</div>
+				<button class="add add1">
+					<span class="plus"><svg width="24" height="24" role="presentation" focusable="false" viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M12 3C11.4477 3 11 3.44772 11 4V11L4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11L13 11V4C13 3.44772 12.5523 3 12 3Z"
+								fill="currentColor"></path>
+						</svg></span>
+					<h1 class="add_h1">Добавить карточку</h1>
+				</button>
+			</div>
+			<div class="div_emp">
+				<span class="title-span">В ходе выполнения</span>
+				<div class="empty">
+	
+				</div>
+				<button class="add add2">
+					<span class="plus"><svg width="24" height="24" role="presentation" focusable="false" viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M12 3C11.4477 3 11 3.44772 11 4V11L4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11L13 11V4C13 3.44772 12.5523 3 12 3Z"
+								fill="currentColor"></path>
+						</svg></span>
+					<h1 class="add_h1">Добавить карточку</h1>
+				</button>
+			</div>
+			<div class="div_emp">
+				<span class="title-span">Сделано</span>
+				<div class="empty">
+	
+				</div>
+				<button class="add add3">
+					<span class="plus"><svg width="24" height="24" role="presentation" focusable="false" viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M12 3C11.4477 3 11 3.44772 11 4V11L4 11C3.44772 11 3 11.4477 3 12C3 12.5523 3.44772 13 4 13H11V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V13H20C20.5523 13 21 12.5523 21 12C21 11.4477 20.5523 11 20 11L13 11V4C13 3.44772 12.5523 3 12 3Z"
+								fill="currentColor"></path>
+						</svg></span>
+					<h1 class="add_h1">Добавить карточку</h1>
+				</button>
+			</div>
+		</div>
+	</main>
+	
+	<div class="modal">
+		<div class="modal__dialog">
+			<div class="modal__content">
+				<form name="form">
+					<div data-close class="modal__close">&times;</div>
+					<div>
+						<div class="modal__title">Напишите задачу</div>
+						<input required placeholder="Title" name="title" type="text" class="modal__input">
+					</div>
+					<div>
+						<div class="modal__title">Описание этой задачи</div>
+						<input required placeholder="Description" name="description" type="text"
+							class="modal__input modal__des">
+					</div>
+					<div>
+						<div class="modal__title">Выберите участников команды</div>
+						<select name="members" class="modal__input">
+							<option value="farrux">farrux</option>
+						</select>
+					</div>
+					<div>
+						<div class="modal__title">Выберите статус</div>
+						<select name="status" class="modal__input">
+							<option value="todo">todo</option>
+							<option value="inprogress">inprogress</option>
+							<option value="done">done</option>
+						</select>
+					</div>
+					<div>
+						<div class="modal__title">Выберите дедлайн</div>
+						<input required placeholder="" name="deadline" type="date" class="modal__input">
+					</div>
+					<button class="create_btn">Создать задачу</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="module" src="main.js"></script>
+	<script type="module" src="/modules/modals.js"></script>
+	<script type="module" src="/modules/formdata.js"></script>
 </body>
+
 </html>
