@@ -116,9 +116,9 @@ close3.onclick = () => {
 
 
 const empties = document.querySelectorAll(".empty");
-// let form = document.forms.add_task1
-// let form2 = document.forms.add_task2
-// let form3 = document.forms.add_task3
+let form1 = document.forms.add_task1
+let form2 = document.forms.add_task2
+let form3 = document.forms.add_task3
 let inp = document.querySelector(".titel");
 let des = document.querySelector(".des");
 let todos = [
@@ -209,7 +209,7 @@ function dragDrop() {
   });
 }
 
-// form.onsubmit = (event) => {
+// form1.onsubmit = (event) => {
 //   event.preventDefault();
 
 //   let todo = {
