@@ -194,7 +194,7 @@ aside {
     background: #1D2125;
     height: 100%;
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 56px);
 }
 
 .header {
@@ -578,4 +578,74 @@ nav a:hover {
 }
 .white{
     color: rgb(0, 0, 0);
+}
+.absol{
+    position: absolute;
+    display: flex;
+    top: 91px;
+    left: 0;
+    color: white;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+.task_box{
+    background: #000;
+    border-radius: 10px;
+    padding: 10px 15px;
+    width: 300px;
+}
+.task_box_top{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.jj{
+    
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.task_box_items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 1s ease;
+    
+}
+.fill{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: rgb(44, 44, 44);
+    border-radius: 10px;
+    padding: 10px;
+}
+.marginbot{
+    margin-bottom: 30px;
+}
+.task_box_bottom img{
+    width: 25px;
+}
+.task_box_bottom{
+    display: flex;
+    align-items: center;
+    padding:10px;
+    
+}
+.hold {
+    cursor: pointer;
+    border: solid #ccc 4px;
+}
+
+.hovered_item {
+    background: gray;
+    border-style: dashed;
+}
+
+.invisible {
+    display: none;
 }
