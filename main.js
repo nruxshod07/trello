@@ -1,18 +1,61 @@
-let closeButton = document.querySelector('.hide_aside button img');
-let openButton = document.querySelector('.show_aside');
-let aside = document.querySelector('aside');
+import {
+	dragDrop,
+	dragEnd,
+	dragEnter,
+	dragLeave,
+	dragOver,
+	dragStart
+} from "./modules/dragNdrop"
+import {
+	getData
+} from "./modules/http";
 
-function closeAside() {
-  aside.style.transition = 'transform 0.3s';
-  aside.style.transform = 'translateX(-94.5%)';
-  openButton.classList.remove('hide')
+const empties = document.querySelectorAll(".empty");
+
+getData('/tasks')
+	.then(res => reload(res))
+
+let temp = [];
+
+function reload(arr, place) {
+
+	for (let todo of arr) {
+		let div = document.createElement("div");
+		let p = document.createElement("p");
+
+		div.setAttribute("id", todo.id);
+		div.setAttribute("class", "fill");
+		div.setAttribute("draggable", true);
+
+		p.innerHTML = todo.description;
+
+		div.append(p);
+
+		switch (todo.status) {
+			case "todo":
+				empties[0].append(div);
+				break;
+			case "inprogress":
+				empties[1].append(div);
+				break;
+			case "done":
+				empties[2].append(div);
+				break;
+		}
+
+		div.ondragstart = dragStart;
+		div.ondragend = dragEnd;
+
+		temp.push(div);
+	}
 }
 
-function openAside() {
-  aside.style.transition = 'transform 0.3s';
-  aside.style.transform = 'translateX(0)';
-  openButton.classList.add('hide')
-}
 
-closeButton.onclick = closeAside
-openButton.onclick = openAside
+for (let empty of empties) {
+	empty.ondragover = dragOver;
+	empty.ondragenter = dragEnter;
+	empty.ondragleave = dragLeave;
+	empty.ondrop = function () {
+		dragDrop(temp, this)
+	};
+}
