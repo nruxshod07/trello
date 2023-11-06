@@ -1,7 +1,27 @@
 {
-  "members": [],
+  "members": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    }
+  ],
   "tasks": [
-    
+    {
+      "title": "create",
+      "description": "do trello homework",
+      "members": "farrux",
+      "status": "inprogress",
+      "deadline": "2023-11-06",
+      "id": 2
+    }
   ],
   "blocks": []
 }

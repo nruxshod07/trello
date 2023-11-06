@@ -857,3 +857,67 @@ svg{
 .white{
     color: rgb(0, 0, 0);
 }
+
+.mem_inps{
+    display: block;
+	margin: 20px auto 20px auto;
+    width: 890px;
+	height: 50px;
+	background-color: rgba(0, 0, 0, 0.61);
+	border: none;
+	font-size: 18px;
+	text-align: center;
+	padding: 0 20px;
+	outline: 0;
+    border-radius: 10px;
+    color: #fff;
+}
+.add_btnm{
+    display: flex;
+    padding: 0px 11.59px 0px 11.79px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    color: #1D2125;
+    font-size: 13.344px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    border-radius: 3px;
+    background: #579DFF;
+    color: white;
+}
+.active{
+    padding: 5px;
+    border: 2px solid #579DFF;
+}
+.modal__content2{
+	position: relative;
+	width: fit-content;
+    height: 330px;
+	padding: 40px 40px 0 40px;
+    padding-bottom: none;
+    background: #1D2125;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	max-height: 80vh;
+	overflow-y: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    scale: 0.75;    
+}
+.m_img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-left: 20px;
+}
+.imgs_member{
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}

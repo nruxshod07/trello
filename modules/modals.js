@@ -45,3 +45,20 @@ function closeModal() {
 }
 modalToggler(btns_open, openModal)
 modalToggler(close_btns, closeModal)
+
+let add_mem = document.querySelectorAll('.add_mem')
+let close_btns2 = document.querySelectorAll('[data-close2]')
+let modal2 = document.querySelector('.m2')
+
+function openModal2() {
+	modal2.classList.add('fade', 'show')
+	modal2.classList.remove('hide')
+	body.style.overflow = 'hidden'
+}
+
+function closeModal2() {
+	modal2.classList.remove('fade', 'show')
+	body.classList.remove('over')
+}
+modalToggler(add_mem, openModal2)
+modalToggler(close_btns2, closeModal2)
