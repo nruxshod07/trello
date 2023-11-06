@@ -7,7 +7,7 @@ import {
 	dragStart
 } from "./modules/dragNdrop"
 import {
-	getData
+	getData, postData
 } from "./modules/http";
 
 const empties = document.querySelectorAll(".empty");
@@ -59,3 +59,55 @@ for (let empty of empties) {
 		dragDrop(temp, this)
 	};
 }
+
+
+
+let membersModal = document.querySelector('.members_modal')
+let form = document.forms.memberAdd
+let inp = form.querySelector('input')
+let error
+let src = ''
+
+form.onsubmit = (e) => {
+	e.preventDefault();
+	error = false;
+
+	if (inp.value.length === 0) {
+		error = true;
+		inp.classList.add("error");
+	} else {
+		inp.classList.remove("error");
+	}
+	if (error) {
+		return error
+	} else {
+		submit();
+		membersModal.classList.add('hide')
+	}
+};
+
+
+function submit() {
+	let user = {
+		'avatar': src,
+	}
+	let fm = new FormData(form);
+
+	fm.forEach((value, key) => {
+		user[key] = value;
+	});
+	postData('/members', user) 
+}
+
+
+let avas = document.querySelectorAll('.ava')
+
+avas.forEach((ava) => {
+	ava.onclick = () => {
+		avas.forEach((avaa) => avaa.classList.remove('selected'))
+		ava.classList.add('selected')
+
+		let img = ava.querySelector('img')
+		src = img.src
+	}
+})

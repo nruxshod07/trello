@@ -37,6 +37,19 @@ function openModal() {
 	modal.classList.add('fade', 'show')
 	modal.classList.remove('hide')
 	body.style.overflow = 'hidden'
+
+
+	let select = document.querySelector('.members_select')
+
+	getData('/members')
+		.then(res => {
+			res.forEach((member) => {
+				let option = document.createElement('option')
+				option.value = member.id
+				option.innerHTML = member.name
+				select.append(option)
+			})
+		})
 }
 
 function closeModal() {
@@ -45,3 +58,19 @@ function closeModal() {
 }
 modalToggler(btns_open, openModal)
 modalToggler(close_btns, closeModal)
+
+let pfpBtn = document.querySelector('.PFPs')
+let membersModal = document.querySelector('.members_modal')
+let close_btn = document.querySelector('.close_members')
+
+pfpBtn.onclick = () => {
+	membersModal.classList.add('fade', 'show')
+	membersModal.classList.remove('hide')
+	body.style.overflow = 'hidden'
+}
+
+close_btn.onclick = () => {
+	membersModal.classList.remove('fade', 'show')
+	membersModal.classList.add('hide')
+	body.classList.remove('over')
+}
