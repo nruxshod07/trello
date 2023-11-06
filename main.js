@@ -111,15 +111,3 @@ avas.forEach((ava) => {
 		src = img.src
 	}
 })
-
-let select = document.querySelector('.members_select')
-
-getData('/members')
-	.then(res => {
-		res.forEach((member) => {
-			let option = document.createElement('option')
-			option.value = member.id
-			option.innerHTML = member.name
-			select.append(option)
-		})
-	})

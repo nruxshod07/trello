@@ -37,6 +37,19 @@ function openModal() {
 	modal.classList.add('fade', 'show')
 	modal.classList.remove('hide')
 	body.style.overflow = 'hidden'
+
+
+	let select = document.querySelector('.members_select')
+
+	getData('/members')
+		.then(res => {
+			res.forEach((member) => {
+				let option = document.createElement('option')
+				option.value = member.id
+				option.innerHTML = member.name
+				select.append(option)
+			})
+		})
 }
 
 function closeModal() {
