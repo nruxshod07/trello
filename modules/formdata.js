@@ -49,6 +49,8 @@ form2.onsubmit = (e) => {
         member[key] = value
     })
 
+    console.log(member);
+
     let error = false
 
     inps2.forEach(inp => {
