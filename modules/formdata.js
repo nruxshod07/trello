@@ -1,6 +1,7 @@
 import { postData } from "./http"
 
 let form = document.forms.form
+let modal = document.querySelector('.modal')
 let inps = document.querySelectorAll('.modal__input')
 
 form.onsubmit = (e) => {
@@ -29,7 +30,7 @@ form.onsubmit = (e) => {
         postData('/tasks', task)
             .then(res => {
                 if (res.status === 200 || res.status === 201) {
-                    console.log(res);
+                    modal.classList.add('hide')
                 }
             })
     }

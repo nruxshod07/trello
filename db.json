@@ -1,7 +1,73 @@
 {
-  "members": [],
+  "members": [
+    {
+      "avatar": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg",
+      "name": "Saloxitdinov",
+      "job": "Frontend developer",
+      "id": 1
+    },
+    {
+      "avatar": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg",
+      "name": "Saloxitdinov",
+      "job": "Frontend developer",
+      "id": 2
+    },
+    {
+      "avatar": "https://media.istockphoto.com/id/1410538853/photo/young-man-in-the-public-park.webp?b=1&s=170667a&w=0&k=20&c=pGdjFVdK-_BhTa6PMy5VNcXdbxVNngzg-OPzMfJKrG8=",
+      "name": "asasas",
+      "job": "Frontend developer",
+      "id": 3
+    }
+  ],
   "tasks": [
-    
+    {
+      "title": "homework",
+      "description": "do homework",
+      "members": "farrux",
+      "status": "todo",
+      "deadline": "2023-11-25",
+      "id": 2
+    },
+    {
+      "title": "homework",
+      "description": "do homework",
+      "members": "farrux",
+      "status": "todo",
+      "deadline": "2023-11-25",
+      "id": 3
+    },
+    {
+      "title": "r",
+      "description": "ff",
+      "members": "farrux",
+      "status": "inprogress",
+      "deadline": "2023-12-03",
+      "id": 4
+    },
+    {
+      "title": "r",
+      "description": "ff",
+      "members": "farrux",
+      "status": "inprogress",
+      "deadline": "2023-12-03",
+      "id": 5
+    },
+    {
+      "title": "wwr",
+      "description": "wrwr",
+      "members": "3",
+      "status": "todo",
+      "deadline": "2023-11-24",
+      "id": 6
+    },
+    {
+      "title": "fff",
+      "description": "ffff",
+      "members": "1",
+      "status": "done",
+      "deadline": "2023-11-25",
+      "id": 7
+    }
   ],
   "blocks": []
 }

@@ -572,7 +572,7 @@ nav a:hover {
 }
 .fade {
 	animation-name: fade;
-	animation-duration: 1.5s;
+	animation-duration: .3s;
 }
 @keyframes fade {
 	from {
@@ -842,6 +842,9 @@ svg{
     gap: -10px;
     border-left:1px solid #929292;
     padding: 10px;
+    background: none;
+    cursor: pointer;
+    border: none;
 }
 .PFPs span{
     transform: translateX(-150%);
@@ -856,4 +859,103 @@ svg{
 }
 .white{
     color: rgb(0, 0, 0);
+}
+
+.members_modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000068;
+    width: 100%;
+    height: 100%;
+}
+
+.modal_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 700px;
+    height: 450px;
+    border-radius: 10px;
+    overflow-y: auto;
+    background-color: #1D2125;
+    padding: 30px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h3 {
+            color: white;
+            padding-bottom: 5px;
+        }
+
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: #3e3e3e58;
+            color: white;
+            border: 1px solid #ffffff;
+            outline: none;
+        }
+        select {
+            width: 100%;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: #3e3e3e58;
+            color: white;
+            border: 1px solid #ffffff;
+            outline: none;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+
+            button {
+                background: none;
+                cursor: pointer;
+
+                img {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+            
+        }
+    }
+}
+.ADD {
+    margin: 0 auto;
+    display: flex;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: #3e3e3e;
+    color: white;
+    border: 1px solid rgb(246, 246, 246);
+    cursor: pointer;
+}
+.error {
+    border: 2px solid #ff0000;
+    color: red($color: #000000);
+}
+
+.ava {
+    padding: 10px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+}
+
+.selected {
+    border: 2px solid #ffffff;
 }
