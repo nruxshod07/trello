@@ -1,3 +1,5 @@
+import { patchData } from "./http";
+
 let temp_id;
 
 export function dragStart() {
@@ -31,6 +33,7 @@ export function dragDrop(ctx) {
 	temp.forEach((item) => {
 		if (item.id === temp_id) {
 			ctx.append(item);
+			patchData('/tasks/' + temp_id, {status: ctx.getAttribute('data-status')})
 		}
 	});
 }

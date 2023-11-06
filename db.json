@@ -30,7 +30,7 @@
       "title": "homework",
       "description": "do homework",
       "members": "farrux",
-      "status": "todo",
+      "status": "inprogress",
       "deadline": "2023-11-25",
       "id": 2
     },
@@ -38,7 +38,7 @@
       "title": "homework",
       "description": "do homework",
       "members": "farrux",
-      "status": "todo",
+      "status": "inprogress",
       "deadline": "2023-11-25",
       "id": 3
     },
@@ -54,7 +54,7 @@
       "title": "Farrux",
       "description": "tixo",
       "members": "farrux",
-      "status": "todo",
+      "status": "done",
       "deadline": "2023-11-07",
       "id": 5
     },
