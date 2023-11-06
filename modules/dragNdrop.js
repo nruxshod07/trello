@@ -1,3 +1,5 @@
+import { getData, patchData } from "./http";
+
 let temp_id;
 
 export function dragStart() {
@@ -27,10 +29,15 @@ export function dragLeave() {
 export function dragDrop(ctx) {
 	let temp = Array.from(document.querySelectorAll('.empty div'))
 	ctx.className = "empty";
+	// temp[0].classList.add('todo')
+	// temp[1].classList.add('inprogress')
+	// temp[2].classList.add('done')
 
 	temp.forEach((item) => {
 		if (item.id === temp_id) {
 			ctx.append(item);
+			patchData('/tasks/' + temp_id, { status: ctx.getAttribute('data-status')})
 		}
 	});
+
 }

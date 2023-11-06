@@ -29,13 +29,7 @@ export const removeData = async (url, id) => {
 }
 
 export const patchData = async (url, body) => {
-    const res = await fetch(BASE_URL + url, {
-        method: 'put',
-        body: JSON.stringify(body),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
+    const res = await axios.patch(BASE_URL + url, body)
 
     return res
 }
