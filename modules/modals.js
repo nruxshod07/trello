@@ -1,3 +1,5 @@
+import { getData } from "./http";
+
 let aside = document.querySelector('aside');
 let modal = document.querySelector('.modal')
 let btns_open = document.querySelectorAll('[data-modal]')

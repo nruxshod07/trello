@@ -24,9 +24,11 @@ export function dragLeave() {
 }
 
 
-export function dragDrop(arr, ctx) {
+export function dragDrop(ctx) {
+	let temp = Array.from(document.querySelectorAll('.empty div'))
 	ctx.className = "empty";
-	arr.forEach((item) => {
+
+	temp.forEach((item) => {
 		if (item.id === temp_id) {
 			ctx.append(item);
 		}
