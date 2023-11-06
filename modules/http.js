@@ -7,17 +7,17 @@ export const getData = async (url) => {
         const res = await axios.get(BASE_URL + url)
 
         return res.data
-    } catch(error) {
+    } catch (error) {
         alert('что то пошло не так перезагрузите страницу')
     }
 }
 
 export const postData = async (url, body) => {
     try {
-        const res = await axios.post(BASE_URL + url,  body)
-    
+        const res = await axios.post(BASE_URL + url, body)
+
         return res
-    } catch(e) {
+    } catch (e) {
         console.log(e);
     }
 }
