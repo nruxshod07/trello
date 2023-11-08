@@ -1,15 +1,22 @@
-import { patchData } from "./http";
-
+import { patchData, removeData } from "./http";
+let body = 	document.body
+export let trash = document.querySelector(".trash")
+export let trash_head = document.querySelector(".trash_head")
 let temp_id;
 
 export function dragStart() {
 	temp_id = this.id;
 	this.className += " hold";
 	setTimeout(() => (this.className = "invisible"), 0);
+	body.style.filter = "brightness(70%)"
+	trash.style.transform = "translateX(0)"
 }
 
 export function dragEnd() {
 	this.className = "fill";
+	body.style.filter = "brightness(100%)"
+	trash.style.transform = "translateX(100%)"
+	// trash_head.style.rotate = "0deg"
 }
 
 export function dragOver(event) {
@@ -28,6 +35,16 @@ export function dragLeave() {
 
 export function dragDrop(ctx) {
 	let temp = Array.from(document.querySelectorAll('.empty div'))
+	if(ctx.getAttribute('data-status') === "delete") {
+		removeData('/tasks', temp_id)
+			.then(res => {
+				if(res.status === 200 || res.status === 201) {
+					temp.find(el => +el.id === +temp_id).remove()
+				}
+			})
+		return
+	}
+
 	ctx.className = "empty";
 
 	temp.forEach((item) => {
