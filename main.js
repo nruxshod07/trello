@@ -50,6 +50,7 @@ trash.ondrop = function () {
 
 function dragEnterTrash(event) {
 	event.preventDefault();
+	trash_head.style.marginLeft = "50px"
 }
 
 inp.onclick = () => {

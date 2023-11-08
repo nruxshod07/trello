@@ -23,13 +23,19 @@
       "name": "Ded",
       "job": "SMM specialist",
       "id": 4
+    },
+    {
+      "avatar": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg",
+      "name": "DedInside",
+      "job": "Frontend developer",
+      "id": 5
     }
   ],
   "tasks": [
     {
-      "title": "dasd",
-      "description": "asdasd",
-      "members": "3",
+      "title": "frgvtbyh",
+      "description": "tgfeeeeeeeedddddddddddddddddddd",
+      "members": "5",
       "status": "done",
       "deadline": "2023-11-09",
       "id": 1
