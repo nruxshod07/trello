@@ -25,6 +25,15 @@
       "id": 4
     }
   ],
-  "tasks": [],
+  "tasks": [
+    {
+      "title": "dasd",
+      "description": "asdasd",
+      "members": "3",
+      "status": "done",
+      "deadline": "2023-11-09",
+      "id": 1
+    }
+  ],
   "blocks": []
 }
