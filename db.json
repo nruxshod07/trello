@@ -25,15 +25,6 @@
       "id": 4
     }
   ],
-  "tasks": [
-    {
-      "title": "A",
-      "description": "a",
-      "members": "2",
-      "status": "todo",
-      "deadline": "2023-11-08",
-      "id": 3
-    }
-  ],
+  "tasks": [],
   "blocks": []
 }

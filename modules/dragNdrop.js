@@ -1,4 +1,4 @@
-import { patchData } from "./http";
+import { patchData, removeData } from "./http";
 let body = 	document.body
 export let trash = document.querySelector(".trash")
 export let trash_head = document.querySelector(".trash_head")
@@ -35,6 +35,16 @@ export function dragLeave() {
 
 export function dragDrop(ctx) {
 	let temp = Array.from(document.querySelectorAll('.empty div'))
+	if(ctx.getAttribute('data-status') === "delete") {
+		removeData('/tasks', temp_id)
+			.then(res => {
+				if(res.status === 200 || res.status === 201) {
+					temp.find(el => +el.id === +temp_id).remove()
+				}
+			})
+		return
+	}
+
 	ctx.className = "empty";
 
 	temp.forEach((item) => {

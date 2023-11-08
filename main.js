@@ -46,16 +46,16 @@ function dragEnterTrash(event) {
 // 	this.className = "trash";
 // }
 
-getData('/tasks')
-	.then(res => {
-		let filtered = res.filter(item => {
-			if (item.status==null) {
-				console.log("/tasks"+`/${item.id}`);
-				removeData("/tasks",`${item.id}`)
-			}
-		})
-		console.log(filtered);
-	})
+// getData('/tasks')
+// 	.then(res => {
+// 		let filtered = res.filter(item => {
+// 			if (item.status==null) {
+// 				console.log("/tasks"+`/${item.id}`);
+// 				removeData("/tasks",`${item.id}`)
+// 			}
+// 		})
+// 		console.log(filtered);
+// 	})
 // trash.ondragover = () =>{
 // 	dragOver
 // 	console.log(1);
