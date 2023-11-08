@@ -13,15 +13,15 @@ export function reload(arr, places) {
         let pfp = document.createElement("img")
         
 
-        getData("/members")
-            .then(res => {
-                let nec = res.forEach(member => {
-                    if (member.id == todo.members) {
+        // getData("/members")
+        //     .then(res => {
+        //         let nec = res.forEach(member => {
+        //             if (member.id == todo.members) {
                         
-                        pfp.src = member.avatar
-                    }
-                });
-            })
+        //                 pfp.src = member.avatar
+        //             }
+        //         });
+        //     })
         
 
         pfp.classList.add("corner")

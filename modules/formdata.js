@@ -32,7 +32,6 @@ form.onsubmit = (e) => {
             inp.classList.remove("error");
         }
     });
-    console.log(task.members);
     if (error) {
         postData('/tasks', task)
             .then(res => {
