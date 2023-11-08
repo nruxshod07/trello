@@ -1,15 +1,20 @@
-import { getData, patchData } from "./http";
+import { getData, patchData, removeData } from "./http";
+import { reload } from "./ui";
 
 let temp_id;
+let trash = document.querySelector('.bin')
+
 
 export function dragStart() {
 	temp_id = this.id;
 	this.className += " hold";
 	setTimeout(() => (this.className = "invisible"), 0);
+	trash.classList.remove('hide')
 }
 
 export function dragEnd() {
 	this.className = "fill";
+	trash.classList.add('hide')
 }
 
 export function dragOver(event) {
@@ -29,9 +34,6 @@ export function dragLeave() {
 export function dragDrop(ctx) {
 	let temp = Array.from(document.querySelectorAll('.empty div'))
 	ctx.className = "empty";
-	// temp[0].classList.add('todo')
-	// temp[1].classList.add('inprogress')
-	// temp[2].classList.add('done')
 
 	temp.forEach((item) => {
 		if (item.id === temp_id) {
@@ -40,4 +42,14 @@ export function dragDrop(ctx) {
 		}
 	});
 
+}
+
+export function dragDropDelete(ctx) {
+	let temp = Array.from(document.querySelectorAll('.empty div'))
+
+	temp.forEach((item) => {
+		if (item.id === temp_id) {
+			removeData('/tasks/', item.id)
+		}
+	});
 }

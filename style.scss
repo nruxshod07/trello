@@ -33,6 +33,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    // filter: brightness(40%);
+    backdrop-filter: brightness(20%);
 }
 
 .home_page_modal {
@@ -777,7 +779,8 @@ svg{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: rgba(0, 0, 0, 0.158);
+    background: rgba(255, 252, 252, 0.319);
+    padding-left: 250px;
 }
 #dot_logo{
     text-decoration: none;
@@ -792,7 +795,7 @@ svg{
     display: flex;
     gap: 20px;
     background: rgb(255, 255, 255);
-    padding: 15px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
     text-decoration: none;
 
@@ -958,4 +961,28 @@ svg{
 
 .selected {
     border: 2px solid #ffffff;
+}
+
+body {
+    position: relative;
+}
+
+.bin {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;    
+    width: 70px;
+    height: 70px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.hovered_bin {
+    scale: 1.1;
 }

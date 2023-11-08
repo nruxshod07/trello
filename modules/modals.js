@@ -6,14 +6,18 @@ let btns_open = document.querySelectorAll('[data-modal]')
 let close_btns = document.querySelectorAll('[data-close]')
 let openButton = document.querySelector('.show_aside');
 let blocks_container = document.querySelector('.container');
-let closeButton = document.querySelector('.hide_aside button img');
+let closeButton = document.querySelector('.hide_aside button');
 let body = document.body
 
+let lower_header = document.querySelector('.lower_header')
+
 function closeAside() {
+	closeButton.classList.add('hide')
 	aside.style.transition = 'transform 0.3s';
 	aside.style.transform = 'translateX(-94.5%)';
 	blocks_container.style.marginLeft = "20px"
 	openButton.classList.remove('hide')
+	lower_header.style.paddingLeft = '30px'
 }
 
 function openAside() {
@@ -21,6 +25,8 @@ function openAside() {
 	aside.style.transform = 'translateX(0)';
 	blocks_container.style.marginLeft = "250px"
 	openButton.classList.add('hide')
+	lower_header.style.paddingLeft = '250px'
+	closeButton.classList.remove('hide')
 }
 
 closeButton.onclick = closeAside
