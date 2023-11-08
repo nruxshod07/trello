@@ -1,5 +1,6 @@
 import {
 	dragDrop,
+	dragDropdel,
 	dragEnter,
 	dragLeave,
 	dragOver,
@@ -23,3 +24,11 @@ for (let empty of empties) {
 		dragDrop(this)
 	};
 }
+let div_bin = document.querySelector('.div_bin')
+
+div_bin.ondragover = dragOver;
+div_bin.ondragenter = dragEnter;
+div_bin.ondragleave = dragLeave;
+div_bin.ondrop = function () {
+	dragDropdel(this)
+};

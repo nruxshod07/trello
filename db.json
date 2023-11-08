@@ -25,55 +25,6 @@
       "id": 4
     }
   ],
-  "tasks": [
-    {
-      "title": "homework",
-      "description": "do homework",
-      "members": "farrux",
-      "status": "inprogress",
-      "deadline": "2023-11-25",
-      "id": 2
-    },
-    {
-      "title": "homework",
-      "description": "do homework",
-      "members": "farrux",
-      "status": "inprogress",
-      "deadline": "2023-11-25",
-      "id": 3
-    },
-    {
-      "title": "hohoh",
-      "description": "dfsjn",
-      "members": "3",
-      "status": "done",
-      "deadline": "2023-11-08",
-      "id": 4
-    },
-    {
-      "title": "Farrux",
-      "description": "tixo",
-      "members": "farrux",
-      "status": "done",
-      "deadline": "2023-11-07",
-      "id": 5
-    },
-    {
-      "title": "Farrux",
-      "description": "molchaty",
-      "members": "farrux",
-      "status": "todo",
-      "deadline": "2023-11-07",
-      "id": 6
-    },
-    {
-      "title": "Farrux",
-      "description": "molchaty",
-      "members": "farrux",
-      "status": "inprogress",
-      "deadline": "2023-11-06",
-      "id": 7
-    }
-  ],
+  "tasks": [],
   "blocks": []
 }
