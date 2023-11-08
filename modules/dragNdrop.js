@@ -23,6 +23,10 @@ export function dragEnter(event) {
 	event.preventDefault();
 	this.className += " hovered";
 }
+export function dragEnter2(event) {
+	event.preventDefault();
+	this.className += " hovered2";
+}
 
 export function dragLeave() {
 	this.className = "empty";
@@ -40,15 +44,15 @@ export function dragDrop(ctx) {
 		}
 	});
 }
+
 export function dragDropdel(ctx) {
 	let temp = Array.from(document.querySelectorAll('.empty div'))
-	ctx.className = "empty";
 
 	temp.forEach((item) => {
 		if (item.id === temp_id) {
 			ctx.append(item);
 			removeData('/tasks/', temp_id)
-			ctx.classList.add('hide')
+			div_bin.classList.add('hide')
 		}
 	});
 }

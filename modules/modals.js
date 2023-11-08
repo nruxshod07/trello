@@ -8,6 +8,7 @@ let openButton = document.querySelector('.show_aside');
 let blocks_container = document.querySelector('.container');
 let closeButton = document.querySelector('.hide_aside button img');
 let body = document.body
+let low_hed = document.querySelector('.lower_header')
 
 function closeAside() {
 	aside.style.transition = 'transform 0.3s';
@@ -20,7 +21,9 @@ function openAside() {
 	aside.style.transition = 'transform 0.3s';
 	aside.style.transform = 'translateX(0)';
 	blocks_container.style.marginLeft = "250px"
+	low_hed.style.paddingLeft = "250px"
 	openButton.classList.add('hide')
+
 }
 
 closeButton.onclick = closeAside

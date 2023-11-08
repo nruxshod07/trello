@@ -2,6 +2,7 @@ import {
 	dragDrop,
 	dragDropdel,
 	dragEnter,
+	dragEnter2,
 	dragLeave,
 	dragOver,
 } from "./modules/dragNdrop"
@@ -27,7 +28,7 @@ for (let empty of empties) {
 let div_bin = document.querySelector('.div_bin')
 
 div_bin.ondragover = dragOver;
-div_bin.ondragenter = dragEnter;
+div_bin.ondragenter = dragEnter2;
 div_bin.ondragleave = dragLeave;
 div_bin.ondrop = function () {
 	dragDropdel(this)
