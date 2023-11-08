@@ -5,9 +5,11 @@ import {
 	dragEnter2,
 	dragLeave,
 	dragOver,
+	trash_head,
+	trash
 } from "./modules/dragNdrop"
 import {
-	getData, postData
+	getData
 } from "./modules/http";
 import { reload } from "./modules/ui";
 
@@ -25,11 +27,19 @@ for (let empty of empties) {
 		dragDrop(this)
 	};
 }
-let div_bin = document.querySelector('.div_bin')
 
-div_bin.ondragover = dragOver;
-div_bin.ondragenter = dragEnter2;
-div_bin.ondragleave = dragLeave;
-div_bin.ondrop = function () {
-	dragDropdel(this)
+trash.ondragover = (e) =>{ 
+	dragOver(e)
+	trash_head.style.transform = "rotate(80deg)"
 };
+trash.ondragenter = dragEnterTrash;
+
+trash.ondragleave = (e) =>{ 
+	trash_head.style.transform = "translateX(0%)"
+};
+trash.ondrop = function () {
+	dragDrop(this)
+};
+function dragEnterTrash(event) {
+	event.preventDefault();
+}

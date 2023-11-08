@@ -1,30 +1,39 @@
 {
   "members": [
     {
-      "avatar": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg",
-      "name": "Saloxitdinov",
-      "job": "Frontend developer",
+      "avatar": "https://play-lh.googleusercontent.com/ivAXDbkway-Tfh_aiaivOkrb0ok52is0EpW6WuEUMx4fXZPg1AIrjUEIN3pYjoHE9Os=s256-rw",
+      "name": "Ayub",
+      "job": "SMM specialist",
       "id": 1
     },
     {
-      "avatar": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg",
-      "name": "Saloxitdinov",
-      "job": "Frontend developer",
+      "avatar": "https://images.generated.photos/VKm_RrXhmrpLNgZ4U3UgO0vMiLzikgR6aPW5Gr_hCzg/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MzI4NTQ5LmpwZw.jpg",
+      "name": "Swa",
+      "job": "Designer",
       "id": 2
     },
     {
-      "avatar": "https://media.istockphoto.com/id/1410538853/photo/young-man-in-the-public-park.webp?b=1&s=170667a&w=0&k=20&c=pGdjFVdK-_BhTa6PMy5VNcXdbxVNngzg-OPzMfJKrG8=",
-      "name": "asasas",
-      "job": "Frontend developer",
+      "avatar": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg",
+      "name": "Uroud",
+      "job": "Designer",
       "id": 3
     },
     {
       "avatar": "https://media.istockphoto.com/id/1410538853/photo/young-man-in-the-public-park.webp?b=1&s=170667a&w=0&k=20&c=pGdjFVdK-_BhTa6PMy5VNcXdbxVNngzg-OPzMfJKrG8=",
-      "name": "Daler Sharifkulov",
+      "name": "Ded",
       "job": "SMM specialist",
       "id": 4
     }
   ],
-  "tasks": [],
+  "tasks": [
+    {
+      "title": "dasd",
+      "description": "asdasd",
+      "members": "3",
+      "status": "done",
+      "deadline": "2023-11-09",
+      "id": 1
+    }
+  ],
   "blocks": []
 }

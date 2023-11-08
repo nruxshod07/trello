@@ -1,4 +1,4 @@
-import { patchData, removeData } from "./http";
+import { patchData } from "./http";
 
 let temp_id;
 let div_bin = document.querySelector('.div_bin')
@@ -7,12 +7,10 @@ export function dragStart() {
 	temp_id = this.id;
 	this.className += " hold";
 	setTimeout(() => (this.className = "invisible"), 0);
-	div_bin.classList.remove('hide')
 }
 
 export function dragEnd() {
 	this.className = "fill";
-	div_bin.classList.add('hide')
 }
 
 export function dragOver(event) {
@@ -35,6 +33,16 @@ export function dragLeave() {
 
 export function dragDrop(ctx) {
 	let temp = Array.from(document.querySelectorAll('.empty div'))
+	if(ctx.getAttribute('data-status') === "delete") {
+		removeData('/tasks', temp_id)
+			.then(res => {
+				if(res.status === 200 || res.status === 201) {
+					temp.find(el => +el.id === +temp_id).remove()
+				}
+			})
+		return
+	}
+
 	ctx.className = "empty";
 
 	temp.forEach((item) => {

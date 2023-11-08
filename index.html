@@ -185,7 +185,14 @@
 			<div class="div_emp">
 				<span class="title-span">Cделать</span>
 				<div class="empty" data-status="todo" >
+					<div id="2" class="fill" draggable="true">
+						<div class="anim_line_top"></div>
+						<div class="anim_line_bottom"></div>
 
+						<p>dwwwwwwwwwwwwwwwwwork</p>
+						<p>Description</p>
+						<img class="corner" src="/public/help.svg" alt="">
+					</div>
 				</div>
 				<button class="add add1">
 					<span class="plus"><svg width="24" height="24" role="presentation" focusable="false"
@@ -247,7 +254,6 @@
 					<div>
 						<div class="modal__title">Выберите участников команды</div>
 						<select name="members" class="modal__input members_select">
-							<option value="farrux">farrux</option>
 						</select>
 					</div>
 					<div>
@@ -267,9 +273,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="div_bin hide">
+	<!-- <div class="div_bin hide">
 		<img src="/public/free-icon-recycle-bin-3156999.png" alt="" class="bin">
+	</div> -->
+	<div class="trash" data-status="delete" >
+		<div class="trash_head"></div>
+		<img src="/public/better_trash.png" alt="">
 	</div>
+
 	<script type="module" src="main.js"></script>
 	<script type="module" src="/modules/modals.js"></script>
 	<script type="module" src="/modules/formdata.js"></script>
