@@ -23,16 +23,54 @@
       "name": "Ded",
       "job": "SMM specialist",
       "id": 4
+    },
+    {
+      "avatar": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg",
+      "name": "DedInside",
+      "job": "Frontend developer",
+      "id": 5
     }
   ],
   "tasks": [
     {
-      "title": "dasd",
-      "description": "asdasd",
-      "members": "3",
-      "status": "done",
+      "title": "frgvtbyh",
+      "description": "tgfeeeeeeeedddddddddddddddddddd",
+      "members": "5",
+      "status": "inprogress",
       "deadline": "2023-11-09",
       "id": 1
+    },
+    {
+      "title": "Aggae",
+      "description": "a",
+      "members": "1",
+      "status": "inprogress",
+      "deadline": "2023-11-11",
+      "id": 2
+    },
+    {
+      "title": "a",
+      "description": "a",
+      "members": "1",
+      "status": "done",
+      "deadline": "2023-11-10",
+      "id": 3
+    },
+    {
+      "title": "b",
+      "description": "a",
+      "members": "1",
+      "status": "done",
+      "deadline": "2023-11-10",
+      "id": 4
+    },
+    {
+      "title": "keeeyup",
+      "description": "a",
+      "members": "1",
+      "status": "todo",
+      "deadline": "2023-11-10",
+      "id": 5
     }
   ],
   "blocks": []
