@@ -48,10 +48,12 @@ function openModal() {
 
 
 	let select = document.querySelector('.members_select')
+	select.innerHTML =""
 
 	getData('/members')
 		.then(res => {
 			res.forEach((member) => {
+				
 				let option = document.createElement('option')
 				option.value = member.id
 				option.innerHTML = member.name

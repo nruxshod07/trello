@@ -60,3 +60,52 @@ function media() {
 
 	return true
 }
+
+let search_div = document.querySelector('.search')
+let search = document.querySelector('.search input')
+let block = document.querySelector('.focusing')
+let tasks = []
+
+
+search.onfocus = () => {
+
+	getData('/tasks')
+		.then(res => tasks = res)
+
+
+	search_div.classList.add('focused')
+	search.classList.add('focused_input')
+	block.style.display = 'block'
+}
+
+search.addEventListener('focusout', () => {
+	search_div.classList.remove('focused')
+	search.classList.remove('focused_input')
+	block.style.display = 'none'
+})
+
+search.onkeyup = () => {
+	let value = search.value.toLowerCase().trim()
+
+	let temp = Array.from(document.querySelectorAll('.empty div'))
+
+	for (let div of temp) {
+		div.classList.remove('finded')
+		div.style.zIndex = 'initial';
+	}
+
+	if (value.length > 0) {
+		let filtered = tasks.filter(task => {
+			let title = task.title.toLowerCase().trim()
+			return title.includes(value)
+		})
+
+		for (let task of filtered) {
+			let div = document.getElementById(task.id)
+			if (div) {
+				div.classList.add('finded')
+				div.style.zIndex = '99';
+			}
+		}
+	}
+}

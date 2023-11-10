@@ -407,6 +407,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    z-index: 0;
 }
 
 .show_aside {
@@ -607,7 +608,7 @@ nav a:hover {
         min-height: 400px;
         height: 100%;
         position: relative;
-
+        filter: brightness(100%);
         .empty {
             display: flex;
             flex-direction: column;
@@ -637,12 +638,42 @@ nav a:hover {
     background: #373d42;
     padding: 10px;
     border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: 1s ease;
+}
+.fill:hover{
+    filter:sepia(40%);
+}
+.fill:hover .anim_line_top{
+    transform: translateX(100%);
+    transition: 1s ease;
+}
+.fill:hover .anim_line_bottom{
+    transform: translateX(-100%);
+    transition: 1s ease;
 }
 .fill span {
     color: red;
 }
-
-
+.anim_line_top{
+    transition: 1s ease;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,rgb(68, 149, 255));
+}
+.anim_line_bottom{
+    transition: 1s ease;
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,rgb(68, 149, 255));
+}
 svg{
     width: 16px;
     height: 16px;
@@ -986,3 +1017,42 @@ body {
 .hovered_bin {
     scale: 1.1;
 }
+
+.focused {
+    width: 350px;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 2px 2px #fff;
+}
+.focused_input {
+    width: 350px;
+}
+
+.focusing {
+    position: absolute;
+    z-index: 90;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+
+.search input {
+    outline: none;
+}
+
+
+.empty {
+    position: relative;
+}
+
+.task {
+    position: absolute;
+    z-index: 999;
+}
+
+.finded {
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 2px 2px white;
+    z-index: 99;
+}
+
