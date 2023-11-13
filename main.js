@@ -13,10 +13,10 @@ import {
 	reload
 } from "./modules/ui";
 
-const empties = document.querySelectorAll(".empty");
-const neag = document.querySelector(".neag");
-const inp = document.querySelector('#search')
-const inp_real = inp.querySelector('input')
+let empties = document.querySelectorAll(".empty");
+let neag = document.querySelector(".neag");
+let inp = document.querySelector('#search')
+let inp_real = inp.querySelector('.sear')
 let tasks = []
 
 getData('/tasks')
@@ -38,11 +38,13 @@ for (let empty of empties) {
 trash.ondragover = (e) =>{ 
 	dragOver(e)
 	trash_head.style.transform = "rotate(80deg)"
+	trash_head.style.marginLeft = "50px"
 };
 trash.ondragenter = dragEnterTrash;
 
 trash.ondragleave = (e) =>{ 
 	trash_head.style.transform = "translateX(0%)"
+	trash_head.style.marginLeft = "0px"
 };
 trash.ondrop = function () {
 	dragDrop(this)
@@ -50,9 +52,7 @@ trash.ondrop = function () {
 
 function dragEnterTrash(event) {
 	event.preventDefault();
-	trash_head.style.marginLeft = "50px"
 }
-
 inp.onclick = () => {
 	getData('/tasks')
 		.then(res => tasks = res)
